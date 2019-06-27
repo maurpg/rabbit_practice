@@ -2,9 +2,10 @@ import pika as pk
 import sys
 from functions import *
 
-
 class Receptor_info():
-
+	"""class receptor for listening all 
+	message of this class the type is capture in the argv"""
+	
     def __init__(self , exchange , exchange_type  ):
         self.conection = pk.BlockingConnection(pk.ConnectionParameters('localhost'))
         self.channel = self.conection.channel()
